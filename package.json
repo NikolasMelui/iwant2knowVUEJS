@@ -1,13 +1,19 @@
 {
   "name": "iwant2knowvuejs",
   "description": "A Vue.js project",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "NikolasMelui <slak@samaradom.ru>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "6.10.2"
+  },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "heroku-postbuild": "npm run build",
+    "dev":
+      "cross-env NODE_ENV=development PORT=5000 nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
+    "start": "cross-env PORT=5000 & babel-node server/index.js",
+    "build": "webpack --progress --hide-modules"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -18,11 +24,7 @@
     "stylus": "^0.54.5",
     "vue": "^2.5.15"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
