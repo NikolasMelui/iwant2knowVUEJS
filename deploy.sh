@@ -1,3 +1,3 @@
 git add .
-git commit -m "Deploy on Heroku"
+git commit -am "Deploy in Heroku"
 git push heroku master
