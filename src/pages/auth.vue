@@ -1,6 +1,6 @@
 <template>
-  <div class="index">
-    <h1>Main page</h1>
+  <div class="auth">
+    <h1>Authentication</h1>
   </div>
 </template>
 
@@ -8,5 +8,5 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/style/index';
+@import '../assets/style/auth';
 </style>
