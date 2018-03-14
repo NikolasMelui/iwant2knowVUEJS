@@ -1,6 +1,7 @@
 <template>
   <div class="index">
-    <h1>Main page</h1>
+    <img src="../assets/img/logo.jpg" alt="Logo">
+    <router-link tag="a" to="/main">Push me</router-link>
   </div>
 </template>
 
